@@ -76,8 +76,8 @@ func replaceChain(newBlocks []Block) {
 
 func run() error {
 	mux := makeMuxRouter()
-	httpAddr := os.Getenv("ADDR")
-	log.Println("listening on port: ", os.Getenv("ADDR"))
+	httpAddr := os.Getenv("PORT")
+	log.Println("listening on port: ", os.Getenv("PORT"))
 	s := &http.Server{
 		Addr:           ":" + httpAddr,
 		Handler:        mux,
